@@ -1,0 +1,385 @@
+@import "fonts.css";
+
+* {
+  margin: 0;
+}
+
+/*h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font: 20vmin/1 HUGEAvantGardeBold;
+  letter-spacing: -0.06em;
+  text-align: center;
+}*/
+
+/*======= Navigation Bar =======*/
+
+nav {
+  height: 72px;
+  background: #ec008c;
+  color: #fff;
+}
+
+/* Hamburger and "X" */
+nav #Layer_1,
+nav #Layer_2 {
+  display: none;
+}
+
+/*Huge Logo */
+nav img {
+  height: 24px;
+  margin: 24px 48px 24px 24px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 132px;
+  margin-top: -54px;
+}
+
+nav ul li {
+  display: block;
+  position: relative;
+  float: left;
+  font-size: 21px;
+  font-family: HUGEAvantGardeBold;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 24px 24px 21px 24px;
+}
+
+nav ul li a:hover {
+  background-color: white;
+  color: #ec008c;
+  cursor: pointer;
+}
+
+nav ul li a i.fa {
+  display: none;
+}
+
+/* Background class for a sections (toggled in "appear" function) */
+.background {
+  background-color: white;
+  color: #ec008c;
+}
+
+/*======= dropdowns =======*/
+
+/* Sub-item sections */
+nav ul li div {
+  position: absolute;
+  margin-top: 21px;
+  background-color: white;
+  font-size: 16px;
+  font-family: Galaxie;
+  width: 230px;
+  z-index: 1;
+  display: none;
+}
+
+nav ul li div a {
+  color: black;
+  display: block;
+  padding: 16px 0 16px 24px;
+  width: 206px;
+}
+
+nav ul li div a:hover {
+  background-color: #eee;
+  color: #ec008c;
+}
+
+/* Copyright */
+nav p {
+  display: none;
+}
+
+/*======= Header =======*/
+
+.getPaid {
+  height: 640px;
+  background-image: url(../images/background-image.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 0;
+  text-align: center;
+  color: white;
+  font: 110px HUGEAvantGardeBold;
+  line-height: 1.5em;
+  position: relative;
+}
+
+.getPaid h1 {
+  width: 100%;
+  padding-top: 107px;
+}
+
+/*======= Body =======*/
+
+.body {
+  font-size: 24px;
+  font-family: Galaxie;
+  position: relative;
+}
+
+/* "Give a shit" text for mobile view */
+.body h3 {
+  display: none;
+}
+
+.body p {
+  padding: 5% 10% 0 10%;
+}
+
+/* Dimming class */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*======== First Media Query ========*/
+
+@media (max-width: 1130px) {
+
+  .getPaid {
+    font-size: 80px;
+  }
+
+  .body {
+    font-size: 20px;
+  }
+
+  .body p {
+    margin-top: -10%;
+  }
+}
+/*======== Second Media Query ========*/
+@media (max-width: 963px) {
+
+  nav ul li a {
+    padding: 24px 10px 21px 10px;
+  }
+
+  .getPaid {
+    font-size: 70px;
+  }
+
+  .body {
+    font-size: 20px;
+  }
+
+  .body p {
+    margin-top: -20%;
+  }
+
+}
+
+/*======== Mobile Version ========*/
+
+@media (max-width: 768px) {
+
+  /*======= NAV =======*/
+
+  nav {
+    height: 60px;
+  }
+
+
+  nav #Layer_1 {
+    height: 60px;
+    cursor: pointer;
+  }
+
+  /* display class for hamburger */
+  nav #Layer_1.displayBro {
+    display: block;
+  }
+
+  nav #Layer_2 {
+    float: right;
+    height: 60px;
+    cursor: pointer;
+  }
+
+  /* display class for "X" */
+  nav #Layer_2.displayBro {
+    display: block;
+  }
+
+  /* display class for mobile function */
+  .displayBro {
+    display: block;
+  }
+
+  /* Huge logo mobile version */
+  nav img {
+    display: none;
+    height: 20px;
+    margin: 0;
+    padding: 18px 24px;
+    width: 50px;
+  }
+
+  nav ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 4px 0 0 0;
+    background-color: white;
+    padding-top: 12px;
+    width: 250px;
+  }
+
+  nav ul li {
+    position: relative;
+    padding: 12px 0;
+    float: none;
+  }
+
+  nav ul li:hover {
+    background-color: #eee;
+  }
+
+  nav ul li a {
+    color: black;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 24px;
+    padding-right: 175px;
+  }
+
+  nav ul li a:hover {
+    background-color: transparent;
+    color: black;
+  }
+
+  /* Chevron class */
+  nav ul li a i.fa {
+    display: block;
+  }
+
+  /* Chevron position */
+  nav ul li a i {
+    float: right;
+    color: #ec008c;
+    position: relative;
+    margin-right: 10px;
+  }
+
+  nav ul li div {
+    position: relative;
+    display: none;
+    width: 100%;
+  }
+
+  nav ul li div a {
+    color: black;
+    display: block;
+    padding: 16px 0 16px 24px;
+    width: 225px;
+  }
+
+  /* class for section a tag */
+  .background {
+    color: black;
+    background-color: transparent;
+  }
+
+  /* Copyright */
+  nav p {
+    display: none;
+    color: black;
+    background-color: white;
+    font-family: Helvetica;
+    font-size: 12px;
+    padding: 190px 0 12px 24px;
+    width: 226px;
+  }
+  /*======= Header =======*/
+
+  .getPaid {
+    height: 240px;
+    z-index: -1;
+  }
+
+  .getPaid h1 {
+    display: none;
+  }
+
+  /*======= Body =======*/
+
+  .body {
+    z-index: -1;
+  }
+
+  .body h3 {
+    display: block;
+    font-size: 44px;
+    font-family: HUGEAvantGardeBold;
+    padding-top: 50px;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: left;
+  }
+
+  .body p {
+    padding-top: 50px;
+    padding-bottom: 100%;
+    font-size: 14px;
+    margin-top: auto;
+  }
+
+  .getPaid.lefty {
+    left: 250px;
+  }
+
+  .body.lefty {
+    left: 250px; 
+  }
+
+  .overlay {
+    background-color: transparent;
+    height: 300px;
+  }
+
+  .overlay2 {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .otherSection {
+
+  }
+}
+
+/* Extra Media Queries for Styling */
+@media (max-width: 490px) {
+
+  .body h3 {
+    padding-top: 0;
+}
+
+@media (max-width: 350px) {
+
+  .body h3 {
+    margin-top: -50px;
+}
